@@ -1,4 +1,4 @@
-%% FILE 1: CONTROLDESK DATA PREPARATION
+%% FILE 1: DATA PREPARATION
 csvFile = '';
 periods = [];
 Ts = 50e-6;
