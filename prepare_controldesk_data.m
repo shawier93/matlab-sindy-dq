@@ -1,10 +1,10 @@
 %% FILE 1: CONTROLDESK DATA PREPARATION
 csvFile = '';
 periods = [];
-Ts = 0.001;
+Ts = 50e-6;
 smoothCurrents = true;
 sgOrder = 3;
-sgFrame = 11;
+sgFrame = 7;
 polePairs = 5;
 
 %% Read the ControlDesk export
