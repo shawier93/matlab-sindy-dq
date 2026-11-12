@@ -54,10 +54,3 @@ derivatives = Theta * SindyModel.Xi;
 
 `Xi` has one row per term and two columns ordered as `did/dt` and `diq/dt`. With `includeId = false`, only the second column represents a fitted equation.
 
-## Training and replay
-
-`trainingPeriods` selects the segment IDs used in the fit. `fitTimeWindows` takes an N-by-2 array of inclusive time intervals in seconds. `fitTimeBasis = 'file'` uses `D.tFile` for those intervals. Replay covers all segments so that held-out segments can be scored as well.
-
-Replay restarts from the measured currents at each window (`replayWindowSec = 0.02` by default). Increase `replaySubsteps` to reduce the integration step. A replay window stops when a modeled current exceeds `maxCurrent` or becomes nonfinite. Check `FailedWindows` alongside MSE, which uses the finite replay samples.
-
-Each run saves a model MAT file, a coefficient CSV, and replay MAT and summary CSV files. `writeReplayCSV = true` also writes the sample-level replay. `replayEnabled = false` skips integration. `saveTrainingCopy = true` saves a separate copy of `D`.
