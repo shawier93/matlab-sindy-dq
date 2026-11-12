@@ -1,12 +1,12 @@
 # SINDy for d–q current dynamics
 
-Prepare a ControlDesk recording, fit sparse differential equations for `id` and `iq`, and replay the currents with fixed-step RK4.
+Prepare a data, fit sparse differential equations for `id` and `iq`, and replay the currents with fixed-step RK4.
 
 ## Run in MATLAB
 
 Use MATLAB R2021a or later. Open the repository folder in MATLAB. Signal Processing Toolbox is required when `smoothCurrents` is enabled.
 
-1. Run `prepare_controldesk_data.m` and select the ControlDesk CSV. File 1 creates `D` in the MATLAB workspace and saves `combined_data.mat` and `combined_data.csv` under `results/<CSV name>/`.
+1. Run `prepare_data.m` and select the data CSV. File 1 creates `D` in the MATLAB workspace and saves `combined_data.mat` and `combined_data.csv` under `results/<CSV name>/`.
 2. Run `identify_sindy.m` in the same workspace. File 2 reads `D` and saves the model and replay outputs in the folder created by File 1.
 
 ```matlab
